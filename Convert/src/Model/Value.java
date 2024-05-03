@@ -30,9 +30,9 @@ public class Value {
 	}
 	
 	public SubUnit getPrefixSubUnit() {
-		return this.unit.getPrefix();
+		return this.unit.prefix();
 	}
 	public SubUnit getMesureSubUnit() {
-		return this.unit.getMesure();
+		return this.unit.sufix();
 	}
 }

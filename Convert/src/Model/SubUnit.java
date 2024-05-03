@@ -1,6 +1,8 @@
 package Model;
 
-public class SubUnit {
+public record SubUnit(String name, String symbol, double convertionValue) {}
+
+/*public class SubUnit {
 
 	private String name;
 	private String symbol;
@@ -23,4 +25,4 @@ public class SubUnit {
 	public double getConvertionValue() {
 		return this.convertionValue;
 	}
-}
+}*/

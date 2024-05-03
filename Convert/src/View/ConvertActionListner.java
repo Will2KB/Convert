@@ -10,7 +10,6 @@ public class ConvertActionListner implements ActionListener{
 	private Controller controller;
 	
 	public ConvertActionListner (Controller controller) {
-		super();
 		this.controller = controller;
 	}
 	

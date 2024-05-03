@@ -1,6 +1,16 @@
 package Model;
 
-public class Unit {
+public record Unit (SubUnit prefix, SubUnit sufix, double convertValue) {
+	public String toString() {
+		return this.prefix.symbol() + this.sufix.symbol();
+	}
+	
+	public Unit(SubUnit prefix, SubUnit sufix) {
+		this(prefix, sufix, 0);
+	}
+}
+
+/*public class Unit {
 	
 //	public enum PrefixUnits {KILO, HECTO, DECA, NONE, DECI, CENTI, MILI};
 //	public enum Mesure {GRAMME, LITER, CUBE}
@@ -15,8 +25,7 @@ public class Unit {
 	}
 	
 	public String getUnit() {
-		return this.prefix.getSymbol() + this.sufix.getSymbol();
-		
+		return this.prefix.symbol() + this.sufix.symbol();
 	}	
 	public void setUnit(SubUnit prefix, SubUnit sufix) {
 		this.prefix = prefix;
@@ -41,4 +50,4 @@ public class Unit {
 	public String toString() {
 		return getUnit();
 	}
-}
+}*/

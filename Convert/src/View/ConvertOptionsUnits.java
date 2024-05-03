@@ -11,9 +11,6 @@ public class ConvertOptionsUnits extends JComboBox<Unit>{
 	private static final long serialVersionUID = 1L;
 
 	public ConvertOptionsUnits(ArrayList<Unit> elements) {
-		super();
-		for(Unit elem : elements) {
-			this.addItem(elem);
-		}
+		elements.forEach((elem) -> this.addItem(elem));
 	}
 }

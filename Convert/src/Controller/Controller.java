@@ -25,9 +25,10 @@ public class Controller {
 		try {
 			this.conversion = new Conversion(fileName);
 			this.initializeValue(0, this.conversion.getBasePrefixUnit(), this.conversion.getBaseMesure(), this.conversion.getBasePrefixUnit(), this.conversion.getBaseMesure());
-		} catch (Exception e) {
+		} catch (ConfigException e) {
 			this.errorFrame.showError(e.getMessage());
-			e.printStackTrace();
+			if(e.getSubException()!= null)
+				e.getSubException().printStackTrace();
 		}
 	}
 	
